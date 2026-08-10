@@ -1,0 +1,41 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.4412335358390721 0.36399863425620277 0.8202548147439119 1.9518003182878942
+  position 0.4119252066564028 -2.460282699249465 3.6999638916173088
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+}
+Robot {
+  translation -0.33 0.26 0.84
+  children [
+    DEF BulbVisual Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+        emissiveColorMap ImageTexture {
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+    DEF Bulb PointLight {
+      attenuation 0 0.2 1
+      intensity 4
+      location 0 0 0.3
+    }
+  ]
+  controller "smart_light"
+  supervisor TRUE
+}

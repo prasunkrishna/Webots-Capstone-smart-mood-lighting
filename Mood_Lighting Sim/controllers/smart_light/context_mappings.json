@@ -1,0 +1,25 @@
+{
+    "time": {
+        "morning": 0,
+        "afternoon": 1,
+        "evening": 2,
+        "night": 3
+    },
+    "location": {
+        "home": 0,
+        "office": 1,
+        "outdoor": 2
+    },
+    "activity": {
+        "relaxing": 0,
+        "studying": 1,
+        "working": 2,
+        "socializing": 3,
+        "alone": 4
+    },
+    "environment": {
+        "quiet": 0,
+        "moderate": 1,
+        "noisy": 2
+    }
+}
